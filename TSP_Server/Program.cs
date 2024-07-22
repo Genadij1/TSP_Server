@@ -36,7 +36,7 @@ class Server
         byte[] responseBytes = Encoding.ASCII.GetBytes(serverResponse);
         await stream.WriteAsync(responseBytes, 0, responseBytes.Length);
 
-        Console.WriteLine($"о {DateTime.Now:HH:mm} від [{clientIP}] отримано рядок: {clientMessage}");
+        Console.WriteLine($"о {DateTime.Now:HH:mm} від [{clientIP}] {clientMessage}");
 
         client.Close();
     }
